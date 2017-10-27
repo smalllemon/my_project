@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+	<meta name="viewport" content="width=device-width" />   
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="stylesheet" type="text/css" href="css/upload.css" /> 
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/upload.js"></script>
+</head>
+<body>
+	<form class="form"  action="http://www.upimgfile.net/upload_image.php"  method="post" enctype="multipart/form-data">  
+	    <span class="Yfile">
+			<input type="file" name="file" id="file" onchange="pageAction.setImagePreview();" >
+			<span>选择文件</span> 
+		</span> 
+		<input type="text" id="adv_style" name="adv_style"  hidden="hidden"> 
+		<input type="text" id="img_title" name="img_title"  hidden="hidden"> 
+		<input type="submit"  value="提交" id="submit">
+		<div id="localImag">
+	        <img id="preview"  style="diplay:none" />
+	    </div>  
+	    <br />
+       	<p> 
+	        <font>图片类型自定义：</font>
+	        <select id="advstyle" onchange="pageAction.getValue(this.value)"> 
+       	    </select>
+        </p>
+        <br />
+        <p> 
+         	<font>标签类型自定义：</font>
+         	<select  id="imgtitle" onchange="pageAction.getTitle(this.value)"> 
+         	       <option value= ""> </option>
+  			       <option value= "测试标签1">测试标签1 </option>
+  			       <option value= "测试标签2">测试标签2 </option>
+  			       <option value= "测试标签3">测试标签3 </option>
+  			       <option value= "测试标签4">测试标签4 </option>
+  			       <option value= "测试标签5">测试标签5 </option>
+				   <option value= "测试标签6">测试标签6 </option>
+  			       <option value= "测试标签7">测试标签7 </option>
+  			       <option value= "测试标签8">测试标签8 </option>
+  			</select>
+       	 	
+	</form>
+</body>
+</html>
